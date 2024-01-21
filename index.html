@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+  <link href="./assets/css/vazir.css" rel="stylesheet" />
+  <link href="./assets/css/style.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title data-translate="page-title"></title>
+  <meta name="keywords" content="کلودفلر, کلادفلر, cloudflare, cf, fragment, xray, v2ray, worker" />
+  <meta name="robots" content="index,follow,noodp" />
+  <meta name="googlebot" content="index,follow" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body data-bs-theme="dark">
+  <nav class="navbar" id="nav">
+    <div class="container-fluid">
+
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+          onclick="toggleTheme()" checked>
+        <label class="form-check-label" for="flexSwitchCheckChecked" style="color: #fff;" data-translate="darkmode">Dark
+          Mode</label>
+      </div>
+
+
+      <h1 data-translate="header-text"></h1>
+
+      <div class="dropdown">
+        <a type="button" class="btn btn-secondary dropdown-toggle" id="dropdown" data-bs-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          <small data-translate="language">Language</small><img
+            src="./assets/img/language-translate-speech-bubbles-icon.svg" class="img-lang" />
+        </a>
+
+        <ul class="dropdown-menu">
+          <li>
+            <a class="dropdown-item" onclick="changeLanguage('en')">English 🇬🇧</a>
+          </li>
+          <li>
+            <a class="dropdown-item" onclick="changeLanguage('de')">Deutsch 🇩🇪</a>
+          </li>
+          <li>
+            <a class="dropdown-item" onclick="changeLanguage('fa')">فارسی 🇮🇷</a>
+          </li>
+          <li>
+            <a class="dropdown-item" onclick="changeLanguage('fr')">Française 🇫🇷</a>
+          </li>
+          <li>
+            <a class="dropdown-item" onclick="changeLanguage('tr')">Türkçe 🇹🇷</a>
+          </li>
+          <li>
+            <a class="dropdown-item" onclick="changeLanguage('es')">Español 🇪🇸</a>
+          </li>
+
+          <li>
+            <a class="dropdown-item" onclick="changeLanguage('zh')">中文 🇨🇳</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container col-md-8" id="content">
+
+
+    <!-- <div class="tabs">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+    </div> -->
+
+    <div class="alert alert-primary d-flex align-items-center" id="defAlert" data-translate="defAlert"></div>
+
+    <div class="orClass"></div>
+
+    <div class="clearfix"></div>
+
+    <p data-translate="input-conf"></p>
+
+    <div class="input-group mb-3">
+      <input class="form-control dirLeft" placeholder="Your Config" value="" id="defConfig" />
+      <span class="input-group-btn">
+        <button class="btn btn-primary" type="button" id="checkConf" data-translate="check"></button>
+      </span>
+    </div>
+
+    <div class="orClass"><small data-translate="or"></small></div>
+    <p data-translate="manual-input"></p>
+
+    <div class="row g-3">
+      <div class="col-md">
+        <div class="form-floating">
+          <select class="form-select" id="protocol">
+            <option value="vless">vless</option>
+            <option value="vmess">vmess</option>
+          </select>
+          <label for="floatingSelectGrid" data-translate="protocol">Protocol</label>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-floating">
+          <input type="text" class="form-control" id="uuid" placeholder="UUID" />
+          <label for="floatingInputGroup2">UUID</label>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="form-floating">
+          <input type="number" class="form-control" id="port" placeholder="PORT" min="0" />
+          <label for="floatingInputGroup2" data-translate="port"></label>
+        </div>
+      </div>
+    </div>
+
+    <br />
+
+    <div class="row g-3">
+      <div class="col-md-5">
+        <div class="form-floating">
+          <input type="text" class="form-control" id="cleanIp" placeholder="CleanIP" />
+          <label for="floatingInputGroup1" data-translate="clean-ip"></label>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="form-floating">
+          <input type="text" class="form-control" id="sni" placeholder="SNI" />
+          <label for="floatingInputGroup2">SNI</label>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="form-floating">
+          <input type="text" class="form-control" id="path" placeholder="Path" />
+          <label for="floatingInputGroup3" data-translate="path"></label>
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <div class="clearfix"></div>
+
+
+
+    <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+      <input type="checkbox" class="btn-check" id="tls" checked>
+      <label class="btn btn-outline-primary" for="tls">TLS</label>
+
+      <input type="checkbox" class="btn-check" id="early">
+      <label class="btn btn-outline-primary" for="early">Early Data</label>
+
+      <input type="checkbox" class="btn-check" id="mux">
+      <label class="btn btn-outline-primary" for="mux">Mux</label>
+    </div>
+
+
+
+
+    <div class="orClass"><small data-translate="f-values"> </small></div>
+
+    <div class="row g-3">
+      <div class="col-md-5">
+        <div class="form-floating">
+          <input type="text" class="form-control" id="packets" placeholder="Packets" value="tlshello" />
+          <label for="floatingInputGroup1" data-translate="packet"></label>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="form-floating">
+          <input type="text" class="form-control" id="length" placeholder="Length" value="10-20" />
+          <label for="floatingInputGroup2" data-translate="length"></label>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="form-floating">
+          <input type="text" class="form-control" id="interval" placeholder="Interval" value="10-20" />
+          <label for="floatingInputGroup3" data-translate="interval"></label>
+        </div>
+      </div>
+    </div>
+
+    <div class="muxForm none" id="muxForm">
+      <div class="orClass"><small data-translate="con-v"> </small></div>
+
+      <div class="form-floating">
+        <input type="number" class="form-control" id="packets" placeholder="Concurrency" value="8" />
+      </div>
+    </div>
+    <hr />
+
+    <br />
+
+    <div class="d-grid gap-2">
+      <button class="btn btn-primary" type="submit" id="getFile" data-translate="create-json-btn"></button>
+    </div>
+
+    <div class="clearfix"></div>
+    <br />
+
+    <hr />
+
+    <footer>
+      <div class="text-center">
+        <p data-translate="footer-text"></p>
+
+        <a href="https://github.com/drunkleen">GitHub</a>
+
+      </div>
+      <br />
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+      <script src="./assets/js/jquery.min.js"></script>
+      <script src="./assets/js/script.js"></script>
+      <script src="./assets/js/utils.js"></script>
+    </footer>
+  </div>
+</body>
+
+</html>
