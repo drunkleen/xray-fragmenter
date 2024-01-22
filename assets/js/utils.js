@@ -1,6 +1,7 @@
 const translations = {
   'de': {
     'direction': 'ltr',
+    'clean-ip-scanner': 'Clean IP Scanner',
     "darkmode": "Dunkelmodus",
     'language': 'Sprache',
     "page-title": "leen | Fragment Tool",
@@ -38,6 +39,7 @@ const translations = {
   'en': {
     'direction': 'ltr',
     "darkmode": "Dark Mode",
+    'clean-ip-scanner': 'Clean IP Scanner',
     'language': 'Language',
     "page-title": "leen | Fragment Tool",
     "header-text": "Free internet is a human right | Women Life Freedom",
@@ -74,6 +76,7 @@ const translations = {
   'fa': {
     'direction': 'rtl',
     "darkmode": "حالت تاریک",
+    'clean-ip-scanner': 'اسکنر IP تمیز',
     'language': 'زبان',
     "page-title": "leen | ابزار فرگمنت",
     "header-text": "اینترنت آزاد حق انسانیست | زن زندگی آزادی",
@@ -110,6 +113,7 @@ const translations = {
   'fr': {
     'direction': 'ltr',
     "darkmode": "Mode sombre",
+    'clean-ip-scanner': 'Scanner IP propre',
     'language': 'Langue',
     "page-title": "leen | Outil de Fragmentation",
     "header-text": "L'internet gratuit est un droit humain | Femmes Vie Liberté",
@@ -146,6 +150,7 @@ const translations = {
   'ru': {
     'direction': 'ltr',
     "darkmode": "Темный режим",
+    'clean-ip-scanner': 'Чистый IP-сканер',
     'language': 'Язык',
     "page-title": "leen | Инструмент Fragment",
     "header-text": "Свободный интернет - это право человека | Женщины Жизнь Свобода",
@@ -182,6 +187,7 @@ const translations = {
   'es': {
     'direction': 'ltr',
     "darkmode": "Modo oscuro",
+    'clean-ip-scanner': 'Escáner de IP limpio',
     'language': 'Idioma',
     "page-title": "leen | Herramienta de Fragmentación",
     "header-text": "Internet gratuito es un derecho humano | Mujeres Vida Libertad",
@@ -219,6 +225,7 @@ const translations = {
   'tr': {
     'direction': 'ltr',
     "darkmode": "Karanlık Mod",
+    'clean-ip-scanner': 'Temiz IP Tarayıcı',
     'language': 'Dil',
     "page-title": "leen | Parça Aracı",
     "header-text": "Özgür internet bir insan hakkıdır | Kadınlar Hayat Özgürlük",
@@ -255,6 +262,7 @@ const translations = {
   'zh': {
     'direction': 'ltr',
     "darkmode": "深色模式",
+    'clean-ip-scanner': '清洁IP扫描器',
     'language': '语言',
     "page-title": "leen | 片段工具",
     "header-text": "自由互联网是人权 | 女性生活自由",
