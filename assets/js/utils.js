@@ -298,6 +298,7 @@ const translations = {
 };
 
 
+
 function changeLanguage(lang = 'en') {
   const elements = document.querySelectorAll('[data-translate]');
   elements.forEach(element => {
@@ -316,8 +317,15 @@ function changeLanguage(lang = 'en') {
 }
 
 function getSavedLanguage() {
-  return localStorage.getItem('selectedLanguage') || 'en';
+  return localStorage.getItem('selectedLanguage');
 }
+
+
+
+if (!localStorage.getItem('darkMode')) {
+  localStorage.setItem('darkMode', 'dark');
+}
+
 
 document.addEventListener('DOMContentLoaded', function () {
   const savedLanguage = getSavedLanguage();
@@ -325,9 +333,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const bodyElement = document.body;
   const currentTheme = localStorage.getItem('darkMode');
+  const checkbox = document.getElementById("flexSwitchCheckChecked");
 
   if (currentTheme) {
-    bodyElement.setAttribute('data-bs-theme', currentTheme);
+    if (currentTheme === 'dark') {
+      checkbox.checked = true;
+      bodyElement.setAttribute('data-bs-theme', 'dark');
+    } else {
+      checkbox.checked = false;
+      bodyElement.setAttribute('data-bs-theme', 'light');
+    }
   }
 });
 
@@ -337,9 +352,13 @@ function toggleTheme() {
 
   if (currentTheme === 'light') {
     bodyElement.setAttribute('data-bs-theme', 'dark');
+
     localStorage.setItem('darkMode', 'dark');
+
   } else {
     bodyElement.setAttribute('data-bs-theme', 'light');
+
+
     localStorage.setItem('darkMode', 'light');
   }
 }
