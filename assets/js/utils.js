@@ -320,7 +320,9 @@ function getSavedLanguage() {
   return localStorage.getItem('selectedLanguage');
 }
 
-
+if (!localStorage.getItem('selectedLanguage')) {
+  localStorage.setItem('selectedLanguage', 'en');
+}
 
 if (!localStorage.getItem('darkMode')) {
   localStorage.setItem('darkMode', 'dark');
