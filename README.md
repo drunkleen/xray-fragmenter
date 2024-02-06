@@ -1,7 +1,7 @@
 # Leen's Fragment Tool
 
 You can access the live version via this link:
-[https://github.com/ali-cloudy/xray-fragmenter/](https://drunkleen.github.io/xray-fragmenter/)
+[https://drunkleen.github.io/xray-fragmenter/](https://drunkleen.github.io/xray-fragmenter/)
 
 ## Introduction
 
