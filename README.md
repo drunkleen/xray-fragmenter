@@ -1,7 +1,7 @@
 # ARTAN Fragment Tool
 
 You can access the live version via this link:
-https://github.com/ali-cloudy/xray-fragmenter
+https://github.com/ali-cloudy/xray-fragmenter/
 
 ## Introduction
 
