@@ -70,7 +70,7 @@
         "network": "###NETWORK###",
         "security": "tls",
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "serverName": "###SNI###",
           "alpn": [
             "h2",
@@ -92,8 +92,8 @@
         }
       },
       "mux": {
-        "enabled": false,
-        "concurrency": -1
+        "enabled": true,
+        "concurrency": 8
       }
     },
     {
